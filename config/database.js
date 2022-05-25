@@ -5,7 +5,7 @@ const mysql = require("mysql2");
         host: 'localhost',
         user: 'root',
         password: 'ROOT',
-        database: 'fastifood'
+        database: 'fastifoodms'
     });
     
     module.exports = pool.promise();

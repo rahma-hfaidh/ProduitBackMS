@@ -5,7 +5,7 @@ const dbConn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'ROOT',
-  database : 'fastifood'
+  database : 'fastifoodms'
 });
 dbConn.connect(function(err) {
   if (err) throw err;
