@@ -1,0 +1,6 @@
+{
+    "host": "localhost",
+    "user":"root",
+    "database":"fastifood",
+    "password":"ROOT"
+}
