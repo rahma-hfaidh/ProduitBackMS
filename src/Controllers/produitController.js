@@ -262,3 +262,40 @@ exports.post = async (req,res,next)=>{
                       }  
                     });
                   };
+
+                  
+exports.findPrice= async (req,res,next)=>{
+
+    const id_prod = req.query.id_prod;
+    const id_unite = req.query.id_unite;
+
+  
+    const data = await Produit.findPrice(id_prod,id_unite);
+    
+    const results = data[0];
+   
+    price=""+results[0].prixProd;
+    //price=pr+"DT"
+
+    
+
+
+    try {
+        
+        if (data[0].length !== 0){
+         
+            res.status(200).send(price);
+    
+            }
+            else if(data[0].length == 0) { 
+                res.status(200).json({succes: false,
+                    message: 'prod introuvable',
+                       });
+            } 
+
+    } catch (error) {
+        
+    }
+    
+      
+}
