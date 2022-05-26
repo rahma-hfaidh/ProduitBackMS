@@ -114,6 +114,12 @@ module.exports = class Produit{
        
        
     }
+
+    static findPrice(id_prod,id_unite){
+        return db.execute (
+            'Select prixProd from detailprod WHERE id_prod = ? and id_unite = ?',[id_prod,id_unite]);
+     
+    }
  
    
 };

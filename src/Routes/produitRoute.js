@@ -14,6 +14,7 @@ router.post('/postProd',ProduitController.post);
 router.get('/GetAllcommandesP/:id_com',ProduitController.findAlll);
 router.get('/GetAllcommandesPA/:id_com',ProduitController.findAllA);
 router.get('/GetAllcommandesPweb/:id_com',ProduitController.findAllweb);
+router.get('/GetPriceProd/:id_prod/:id_unite', ProduitController.findPrice);
 module.exports=router;  
 
 
